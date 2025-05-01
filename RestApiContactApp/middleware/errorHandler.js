@@ -19,7 +19,7 @@ export const errorHandler = (err , req, res , next ) => {
             res.json({title : "server error" , message : err.message , stackTrace : err.stack})
             break;
         default:
-            console.log("no error all goof");       
+            console.log("no error all good");       
             break;
     }
 }
