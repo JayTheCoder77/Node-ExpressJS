@@ -1,8 +1,11 @@
 import express from "express";
+import { validateToken } from "../middleware/validateTokenHandler.js";
 import {getContacts , createContact , getContact , updateContact , deleteContact} from "../controllers/contactController.js";
 
 
 const router = express.Router();
+
+router.use(validateToken);
 
 router.route("/").get(getContacts).post(createContact)
 
